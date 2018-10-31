@@ -34,10 +34,10 @@ In the source file, the "ID" column appears first in the file and is presented i
 
 In order to make the file more user-friendly, both files were edited via text editor to format the "ID" column as "id". 
 
-###Combining the files
+### Combining the files
 To create a single complete dataset, values from ks-projects-201801.csv were added to ks-projects-201612.csv. This resulted in the omission of the USD_Pledged_Real and USD_Goal_Real in order to create a uniform dataset.
 
-###Removing non-ASCII characters from name
+### Removing non-ASCII characters from name
 Many Kickstarters contain characters that do not map correctly to most US charsets, such as the Germanic o with an umlaut or accented characters in Spanish. Due to low value of this column and the high likelihood of charset-related errors on import, characters not in the ASCII standard were removed from the Name column. Values were not replaced. This results in some missing letters in certain names, but overally readability is not compromised as the surrounding characters are preserved. 
 
 ### USD_Pledged from Float to Int
