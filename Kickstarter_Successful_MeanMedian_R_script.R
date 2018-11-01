@@ -49,9 +49,9 @@ meanGoalByCat <- aggregate(successfulUSD3$goal, by=list(category=successfulUSD3$
 colnames(meanGoalByCat) <- c("Category", "MeanGoal")
 meanGoalByCat
 
-meanGoalByCat <- aggregate(successfulUSD3$goal, by=list(category=successfulUSD3$main_category), FUN=mean, na.rm = TRUE)
-colnames(meanGoalByCat) <- c("Category", "MeanGoal")
-meanGoalByCat
+medianGoalByCat <- aggregate(successfulUSD3$goal, by=list(category=successfulUSD3$main_category), FUN=median, na.rm = TRUE)
+colnames(medianGoalByCat) <- c("Category", "MedianGoal")
+medianGoalByCat
 
 # plotting work - Outliers? Y-axis on Mean Pledged plot?
 
