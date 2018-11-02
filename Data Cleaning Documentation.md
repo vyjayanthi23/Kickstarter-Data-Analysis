@@ -1,20 +1,11 @@
 # Data Cleaning Documentation
 
 ## Source File
-> 1. 1-2 paragraph text description of the data source/s (how much, where from, what it
-contains, etc.) with a properly formatted citation for each data source.
-> 2. Specifically identify any intellectual policy constraints, or lack thereof (licensing).
-
 Kickstarter (2017), Kickstarter Projects (3) [Data file]. Retrieved September 10, 2018, from https://www.kaggle.com/kemical/kickstarter-projects
 
 The source file for our Kickstarter Data Analysis was taken from kaggle.com, under a Creative Commons BY-NC-SA 4.0 license. This means that, as long as we provide the appropriate attribution, do not use the data for commercial purposes, and share our work under the same license, we are free to share and adapt the dataset.
 
-The file was originally provided in two parts:
-
-1. ks-projects-201612.csv - encompasses the time period 
-2. ks-projects-201801.csv - encompasses the time period 
-
-Both files contain the following columns:
+The file contains the following columns:
 1. ID - unique 10 digit number for the project
 2. Name - Alphanumeric name, or title, of the project
 3. Category - Sub-category within the main category, defining the type of project within the main category
@@ -29,11 +20,6 @@ Both files contain the following columns:
 12. Country - Country of origin of the Kickstarter
 13. USD Pledged - Pledged column converted to a dollar amount
 
-The ks-projects-201801.csv.zip file has two additional columns:
-
-14. USD_Pledged_Real
-15. USD_Goal_Real
-
 ## Metadata
 > 1 paragraph description of the metadata: what information is available to help you
 interpret and understand the data?
@@ -44,9 +30,6 @@ interpret and understand the data?
 Technically, there did not appear to be too many issues with the data.  However, both files required editing in order to make them usable for the purposes of analysis in R.  In addition, since the dataset included various currencies over a span of multiple years (during which conversion rates would have fluctuated greatly), and because we are making our recommendations about launching a successful Kickstarter campaign to a US-based audience, we decided to focus only on records where the currency used was USD.  
 
 ## Cleaning the file
-> 5. 1 paragraph description of your rationale for the steps you're taking to remediate data. For example, if you need to fill in empty fields, specify what value you chose and why.
-> 6. A script or step-by-step textual description (or a combination) that documents your data cleaning process with enough detail for replication.  
-
 The following operations were performed on the files.
 
 ### Lowercasing the "ID" column
