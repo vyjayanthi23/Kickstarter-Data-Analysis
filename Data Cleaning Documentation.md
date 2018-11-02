@@ -62,3 +62,12 @@ Many Kickstarters contain characters that do not map correctly to most US charse
 
 ### USD_Pledged from Float to Int
 Certain Kickstarters appear to have solicited partial dollar amounts from backers, resulting in some rows existing as floats rather than as ints. Due to the low incidence of floats and the low value of the partial data, floats were truncated to ints in the final file. 
+
+### Launched - Removed values from the year 1970
+Some values appear to have defaulted to 1/1/1970. This is definitely incorrect, and these dates have been removed from the column. 
+
+### Removed non-USD values
+We were a little uncertain how the dataset was representing foreign currencies and their comprable USD values. These values may have been calculated at the time, or after the fact, or someone may have invented them entirely. Rather than relying on the data provided and assuming a rule had been uniformly applied to all currency types, we chose to limit our analysis to Kickstarters that used USD as their currency. 
+
+### Removed Duplicates
+Some rows appeared twice, either due to inclusion in both files or some error in data preparation. These rows were removed. 
